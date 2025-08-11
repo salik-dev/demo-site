@@ -1,0 +1,88 @@
+@import "@/app/mixins";
+
+.subNav {
+  &__list {
+    visibility: collapse;
+    transition: visibility 0.2s ease;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      border: 8px solid transparent;
+      border-bottom-color: var(--bg-white);
+      position: absolute;
+      bottom: 100%;
+      left: 2rem;
+    }
+
+    width: 24rem;
+    list-style: none;
+    position: absolute;
+    top: 145%;
+    left: 0;
+    background-color: var(--bg-white);
+    padding: 2rem;
+    border-radius: var(--border-radius-small);
+    box-shadow: var(--box-shadow-2);
+
+    &-link {
+      transition-property: background-color, color; /* Specify the properties to transition */
+      transition-duration: 0.2s; /* Duration of the transition */
+      transition-timing-function: ease; /* Timing function (optional) */
+
+      &:visited,
+      &:link {
+        display: flex;
+        border-radius: var(--border-radius-small);
+
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        padding-left: 1.5rem;
+        // padding-right: auto;
+
+        font-family: inherit;
+        font-size: var(--font-size-1_5rem);
+        line-height: 1;
+        font-weight: var(--font-weight-regular);
+        color: var(--text-dark);
+      }
+
+      &:hover {
+        background-color: var(--bg-light-blue);
+        color: var(--text-primary-blue);
+      }
+
+      @include respond("desktop") {
+        &:visited,
+        &:link {
+          font-size: var(--font-size-1_8rem);
+          font-style: normal;
+        }
+      }
+    }
+
+    @include respond("desktop") {
+      & {
+        visibility: collapse;
+        box-shadow: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0 2rem;
+        height: 0px;
+        transition: height 0.3s ease;
+      }
+
+      &:global(.subnav-visible) {
+        visibility: visible;
+        height: auto;
+      }
+
+      &:global(.subnav-visible)::before {
+        content: none;
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+@import "@/app/mixins";
+
+.nav__menu {
+  list-style: none;
+  display: flex;
+  gap: 3.8rem;
+
+  &-item {
+    position: relative;
+
+    &:hover {
+      & > ul,
+      & > div {
+        visibility: visible;
+      }
+    }
+  }
+
+  &-link {
+    font-family: inherit;
+    line-height: 1;
+    padding: 17.5px 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    color: inherit;
+    font-size: inherit;
+  }
+
+  @include respond("desktop") {
+    & {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      width: 100%;
+
+      margin-top: 1rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    &-item:hover {
+      & > ul,
+      & > div {
+        visibility: collapse;
+      }
+    }
+
+    .nav__menu-link {
+      font-family: inherit;
+      font-weight: var(--font-weight-medium);
+      font-size: var(--font-size-2rem);
+
+      color: var(--text-dark);
+
+      display: flex;
+      justify-content: space-between;
+
+      padding: 2rem;
+      border-radius: var(--border-radius-small);
+
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: var(--bg-light-blue);
+      }
+    }
+
+    &-item:global(.subnav-visible) > div,
+    &-item:global(.subnav-visible) > ul {
+      visibility: visible;
+    }
+  }
+}

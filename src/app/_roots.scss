@@ -1,0 +1,94 @@
+// Apply SCSS variables to CSS variables in :root
+
+:root {
+  /* Primary Colors */
+  --primary-blue: #3554d1;
+  --dark-blue: #163c8c;
+  --darker-blue: #13357b;
+  --darkest-blue: #051036;
+  --transparent: transparent;
+
+  --semantic-green: #09e62d;
+  --semantic-red: #e60938;
+  --semantic-yellow: #e6b515;
+
+  /* Accent Colors */
+  --highlight-yellow: #f8d448;
+
+  /* Neutral Colors */
+  --white: #ffffff;
+  --white-gray: #3554d10d;
+  --dark-gray: #0d2857;
+
+  /* Text Colors */
+  --text-white: #fff;
+  --text-dark: #051036;
+  --text-light: #697488;
+  --text-primary-blue: #3554d1;
+
+  --text-semantic-green: #09e62d;
+  --text-semantic-red: #e60938;
+  --text-semantic-yellow: #e6b515;
+
+  /* Border Color */
+  --border-white: #fff;
+  --border-color: #dddddd;
+  --border-primary: #3554d1;
+  --border-darkest-blue: #051036;
+  --border-soft-blue: #dadfe6;
+
+  --border-semantic-green: #09e62d;
+  --border-semantic-red: #e60938;
+  --border-semantic-yellow: #e6b515;
+
+  /* Background Colors */
+  --bg-transparent: transparent;
+  --bg-white: #ffff;
+
+  --bg-light-gray: #f5f5f5;
+  --bg-regular-gray: #dddddd;
+  --bg-dark-gray: #0d2857;
+
+  --bg-light-blue: #e5f0fd;
+  --bg-primary-blue: #3554d1;
+  --bg-dark-blue: #163c8c;
+  --bg-darker-blue: #13357b;
+  --bg-darkest-blue: #051036;
+
+  --bg-light-green: #ebfcea;
+
+  --bg-semantic-green: #09e62d;
+  --bg-semantic-red: #e60938;
+  --bg-semantic-yellow: #e6b515;
+
+  //fonts...
+  --font-primary: "Jost", sans-serif;
+
+  // Font Weight
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+  //Font size
+  --font-size-6rem: 6rem;
+  --font-size-4rem: 4rem;
+  --font-size-3rem: 3rem;
+  --font-size-2_6rem: 2.6rem; // Modified variable name
+  --font-size-2_2rem: 2.2rem;
+  --font-size-2rem: 2rem;
+  --font-size-1_8rem: 1.8rem;
+  --font-size-1_6rem: 1.6rem;
+  --font-size-1_5rem: 1.5rem;
+  --font-size-1_4rem: 1.4rem;
+  --font-size-1_2rem: 1.2rem;
+
+  //border radius
+  --border-radius-small: 4px;
+  --border-radius-medium: 12px;
+  --border-radius-large: 60px;
+  --border-radius-full: 9999px;
+
+  //Shadow
+  --box-shadow-1: 0 10px 35px 0 rgba(5, 16, 54, 0.1);
+  --box-shadow-2: 0 10px 60px 0 rgba(5, 16, 54, 0.05);
+}

@@ -1,0 +1,80 @@
+@import "@/app/mixins";
+
+.section-p-destination {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+
+  @include respond("desktop") {
+    padding-top: 11rem;
+    padding-bottom: 11rem;
+  }
+
+  @include respond("tab-land") {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  @include respond("tab-port") {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  @include respond("phone") {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.d-slider-section {
+  margin-bottom: 4.3rem;
+
+  @include respond("desktop") {
+    padding: 0 2rem;
+  }
+}
+.d-banner {
+  margin-top: 12rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+
+  @include respond("desktop") {
+    margin-top: 10rem;
+    justify-content: center;
+  }
+
+  @include respond("tab-land") {
+    margin-top: 8rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  @include respond("tab-port") {
+    margin-top: 6rem;
+  }
+}
+
+.section {
+  &-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+
+    @include respond("phone") {
+      flex-direction: column;
+      row-gap: 1rem;
+      align-items: flex-start;
+    }
+  }
+
+  &-title {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    @include respond("phone") {
+      gap: 2px;
+    }
+  }
+}
